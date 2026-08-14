@@ -497,30 +497,6 @@ Priorities:
 * [ ] **Monitoring** — Authentication and write operations are logged and monitored.
 
 
-
-# Repository Structure
-
-```text
-.
-├── README.md
-│
-├── report/
-│   ├── API_Security_Risk_Analysis_Report.pdf
-│   └── API_Security_Risk_Analysis_Report.docx
-│
-├── screenshots/
-│   ├── postman/
-│   └── devtools/
-│
-└── evidence/
-    ├── curl/
-    └── postman_collection/
-```
-
-The original report specifies a repository structure containing the report, screenshots, raw evidence, Postman collection and README.
-
-
-
 #  References
 
 * **OWASP API Security Top 10 (2023)**
