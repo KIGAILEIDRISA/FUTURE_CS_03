@@ -8,7 +8,7 @@
 ![Assessment Type](https://img.shields.io/badge/Testing-Read--Only%20%7C%20Non--Intrusive-green)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 
----
+
 
 ## Overview
 
@@ -23,7 +23,7 @@ The assessment followed the **OWASP API Security Top 10 (2023)** as the primary 
 
 No production systems were targeted, and no exploitation was performed.
 
----
+
 
 ## Assessment Information
 
@@ -38,7 +38,7 @@ No production systems were targeted, and no exploitation was performed.
 
 The assessment was limited to publicly available APIs explicitly published for testing and learning.
 
----
+
 
 # Objectives
 
@@ -53,7 +53,7 @@ The assessment objectives were to:
 * Translate technical weaknesses into business impact.
 * Recommend practical and implementable remediation.
 
----
+
 
 # Scope
 
@@ -66,7 +66,7 @@ The assessment objectives were to:
 
 Both APIs are publicly provided for testing and learning.
 
----
+
 
 ##  Permitted Activities
 
@@ -96,7 +96,7 @@ The following activities were not performed:
 
 The purpose was to identify and communicate risk rather than prove exploitability through intrusive testing.
 
----
+
 
 #  Tools Used
 
@@ -109,7 +109,7 @@ The purpose was to identify and communicate risk rather than prove exploitabilit
 | **API Security Checklist**           | Cross-check practical API security controls                                                            |
 | **Microsoft Word**                   | Report production                                                                                      |
 
----
+
 
 # Methodology
 
@@ -145,7 +145,7 @@ The assessment followed a structured security-review process:
 10. **Risk Rating**
     Evaluate likelihood and impact and translate findings into business consequences and remediation.
 
----
+
 
 # Findings Summary
 
@@ -163,7 +163,7 @@ The assessment identified **nine observations**:
 | **API-08** | State-changing methods reachable without authentication         | API5:2023 Broken Function Level Authorization        |  **Medium**        | P2       |
 | **API-09** | Enforced API key and clean error handling                       | Positive observation                                 |  **Informational** | —        |
 
----
+
 
 #  Risk Distribution
 
@@ -176,7 +176,7 @@ The assessment identified **nine observations**:
 
 **Total observations: 9**
 
----
+
 
 #  Key Findings
 
@@ -199,7 +199,7 @@ In a production SaaS environment, this pattern could allow anyone who knows the 
 * Fail closed when credentials are missing or invalid.
 * Log authentication decisions for monitoring and incident response.
 
----
+
 
 ##  API-02 — Excessive Exposure of Personal Information
 
@@ -231,7 +231,7 @@ In a production environment, this type of response could provide attackers with 
 * Mask sensitive information where appropriate.
 * Enforce server-side pagination and maximum page sizes.
 
----
+
 
 ##  API-03 — Broken Object Level Authorization (BOLA)
 
@@ -260,7 +260,7 @@ In a live SaaS platform, this could become a cross-tenant data exposure where on
 * Use UUIDs as additional defence against simple enumeration.
 * Add automated cross-tenant authorization tests.
 
----
+
 
 ## API-04 — No Effective Rate Limiting
 
@@ -288,7 +288,7 @@ Without effective identity-bound rate limits, attackers could potentially:
 
 > Testing was deliberately limited to 25 sequential requests. No flooding or denial-of-service testing was performed.
 
----
+
 
 ##  API-05 — Insufficient Input Validation / Mass Assignment
 
@@ -321,7 +321,7 @@ In a production application, unrestricted fields such as `isAdmin` or `role` cou
 * Use parameterised database queries.
 * Encode output appropriately.
 
----
+
 
 ##  API-06 — Permissive CORS Configuration
 
@@ -349,7 +349,7 @@ In an affected production application, a malicious website could potentially rea
 * Restrict allowed HTTP methods and headers.
 * Add CORS regression tests.
 
----
+
 
 ## API-07 — Missing Security and Transport Headers
 
@@ -382,7 +382,7 @@ By comparison, ReqRes returned HSTS, `X-Frame-Options: DENY` and `Cache-Control:
 * Add appropriate security headers.
 * Remove unnecessary technology/version disclosure.
 
----
+
 
 ##  API-08 — State-Changing Methods Without Authentication
 
@@ -410,7 +410,7 @@ If the same authorization model existed in production, anonymous users could pot
 * Require additional confirmation for destructive operations.
 * Log and monitor write/delete operations.
 
----
+
 
 #  API-09 — Positive Security Control Observed
 
@@ -427,7 +427,7 @@ It:
 
 The report identifies this as the desired target state for API authentication and error handling.
 
----
+
 
 #  Remediation Roadmap
 
@@ -444,7 +444,7 @@ Priorities:
 
 **Findings addressed:** API-01, API-03, API-08
 
----
+
 
 ## Phase 2 — Short Term
 
@@ -461,7 +461,7 @@ Priorities:
 
 **Findings addressed:** API-02, API-05, API-06
 
----
+
 
 ## Phase 3 — Medium Term
 
@@ -480,7 +480,7 @@ Priorities:
 
 **Findings addressed:** API-04, API-07
 
----
+
 
 #  API Security Control Checklist
 
@@ -496,7 +496,7 @@ Priorities:
 * [ ] **Information Disclosure** — Remove unnecessary technology/version banners.
 * [ ] **Monitoring** — Authentication and write operations are logged and monitored.
 
----
+
 
 # Repository Structure
 
@@ -519,7 +519,7 @@ Priorities:
 
 The original report specifies a repository structure containing the report, screenshots, raw evidence, Postman collection and README.
 
----
+
 
 #  References
 
@@ -531,7 +531,7 @@ The original report specifies a repository structure containing the report, scre
 
 These are the references listed in the original report.
 
----
+
 
 #  Ethics & Responsible Testing
 
@@ -551,7 +551,7 @@ No real customer data was placed at risk.
 
 > **Security testing should only be performed against systems you own or systems for which you have explicit permission to test.**
 
----
+
 
 # Conclusion
 
@@ -563,7 +563,7 @@ The assessment demonstrates two different API security approaches.
 
 The central lesson from the assessment is that **authentication and authorization should be enforced by the API platform by default rather than being optional controls implemented independently by individual handlers**.
 
----
+
 
 ##  Author
 
