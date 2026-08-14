@@ -180,7 +180,7 @@ The assessment identified **nine observations**:
 
 #  Key Findings
 
-## 🔴 API-01 — Unauthenticated Access to All Data Endpoints
+##  API-01 — Unauthenticated Access to All Data Endpoints
 
 **Severity:** High
 **OWASP:** API2:2023 Broken Authentication
