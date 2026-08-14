@@ -153,15 +153,15 @@ The assessment identified **nine observations**:
 
 | ID         | Finding                                                         | OWASP API Security Top 10                            | Severity             | Priority |
 | ---------- | --------------------------------------------------------------- | ---------------------------------------------------- | -------------------- | -------- |
-| **API-01** | Unauthenticated access to all data endpoints                    | API2:2023 Broken Authentication                      | 🔴 **High**          | P1       |
-| **API-02** | Excessive exposure of personal information                      | API3:2023 Broken Object Property Level Authorization | 🔴 **High**          | P1       |
-| **API-03** | No object-level authorization on record identifiers             | API1:2023 BOLA                                       | 🔴 **High**          | P1       |
-| **API-04** | No effective rate limiting on anonymous traffic                 | API4:2023 Unrestricted Resource Consumption          | 🟠 **Medium**        | P2       |
-| **API-05** | Input accepted without validation / undeclared fields persisted | API6:2023 / API3:2023                                | 🟠 **Medium**        | P2       |
-| **API-06** | Permissive CORS with credentials                                | API8:2023 Security Misconfiguration                  | 🟠 **Medium**        | P2       |
-| **API-07** | Missing HTTP security and transport hardening headers           | API8:2023 Security Misconfiguration                  | 🟡 **Low**           | P3       |
-| **API-08** | State-changing methods reachable without authentication         | API5:2023 Broken Function Level Authorization        | 🟠 **Medium**        | P2       |
-| **API-09** | Enforced API key and clean error handling                       | Positive observation                                 | 🔵 **Informational** | —        |
+| **API-01** | Unauthenticated access to all data endpoints                    | API2:2023 Broken Authentication                      |  **High**          | P1       |
+| **API-02** | Excessive exposure of personal information                      | API3:2023 Broken Object Property Level Authorization |  **High**          | P1       |
+| **API-03** | No object-level authorization on record identifiers             | API1:2023 BOLA                                       |  **High**          | P1       |
+| **API-04** | No effective rate limiting on anonymous traffic                 | API4:2023 Unrestricted Resource Consumption          |  **Medium**        | P2       |
+| **API-05** | Input accepted without validation / undeclared fields persisted | API6:2023 / API3:2023                                |  **Medium**        | P2       |
+| **API-06** | Permissive CORS with credentials                                | API8:2023 Security Misconfiguration                  |  **Medium**        | P2       |
+| **API-07** | Missing HTTP security and transport hardening headers           | API8:2023 Security Misconfiguration                  |  **Low**           | P3       |
+| **API-08** | State-changing methods reachable without authentication         | API5:2023 Broken Function Level Authorization        |  **Medium**        | P2       |
+| **API-09** | Enforced API key and clean error handling                       | Positive observation                                 |  **Informational** | —        |
 
 ---
 
@@ -169,10 +169,10 @@ The assessment identified **nine observations**:
 
 | Severity             | Count | Findings                       |
 | -------------------- | ----: | ------------------------------ |
-| 🔴 **High**          |     3 | API-01, API-02, API-03         |
-| 🟠 **Medium**        |     4 | API-04, API-05, API-06, API-08 |
-| 🟡 **Low**           |     1 | API-07                         |
-| 🔵 **Informational** |     1 | API-09                         |
+| **High**          |     3 | API-01, API-02, API-03         |
+|  **Medium**        |     4 | API-04, API-05, API-06, API-08 |
+|  **Low**           |     1 | API-07                         |
+|  **Informational** |     1 | API-09                         |
 
 **Total observations: 9**
 
@@ -201,7 +201,7 @@ In a production SaaS environment, this pattern could allow anyone who knows the 
 
 ---
 
-## 🔴 API-02 — Excessive Exposure of Personal Information
+##  API-02 — Excessive Exposure of Personal Information
 
 **Severity:** High
 **OWASP:** API3:2023 Broken Object Property Level Authorization
@@ -233,7 +233,7 @@ In a production environment, this type of response could provide attackers with 
 
 ---
 
-## 🔴 API-03 — Broken Object Level Authorization (BOLA)
+##  API-03 — Broken Object Level Authorization (BOLA)
 
 **Severity:** High
 **OWASP:** API1:2023 Broken Object Level Authorization
@@ -262,7 +262,7 @@ In a live SaaS platform, this could become a cross-tenant data exposure where on
 
 ---
 
-## 🟠 API-04 — No Effective Rate Limiting
+## API-04 — No Effective Rate Limiting
 
 **Severity:** Medium
 **OWASP:** API4:2023 Unrestricted Resource Consumption
@@ -290,7 +290,7 @@ Without effective identity-bound rate limits, attackers could potentially:
 
 ---
 
-## 🟠 API-05 — Insufficient Input Validation / Mass Assignment
+##  API-05 — Insufficient Input Validation / Mass Assignment
 
 **Severity:** Medium
 **OWASP:** API6:2023 / API3:2023
@@ -323,7 +323,7 @@ In a production application, unrestricted fields such as `isAdmin` or `role` cou
 
 ---
 
-## 🟠 API-06 — Permissive CORS Configuration
+##  API-06 — Permissive CORS Configuration
 
 **Severity:** Medium
 **OWASP:** API8:2023 Security Misconfiguration
@@ -351,7 +351,7 @@ In an affected production application, a malicious website could potentially rea
 
 ---
 
-## 🟡 API-07 — Missing Security and Transport Headers
+## API-07 — Missing Security and Transport Headers
 
 **Severity:** Low
 **OWASP:** API8:2023 Security Misconfiguration
@@ -384,7 +384,7 @@ By comparison, ReqRes returned HSTS, `X-Frame-Options: DENY` and `Cache-Control:
 
 ---
 
-## 🟠 API-08 — State-Changing Methods Without Authentication
+##  API-08 — State-Changing Methods Without Authentication
 
 **Severity:** Medium
 **OWASP:** API5:2023 Broken Function Level Authorization
@@ -412,7 +412,7 @@ If the same authorization model existed in production, anonymous users could pot
 
 ---
 
-# 🔵 API-09 — Positive Security Control Observed
+#  API-09 — Positive Security Control Observed
 
 **Severity:** Informational
 
@@ -498,7 +498,7 @@ Priorities:
 
 ---
 
-# 📁Repository Structure
+# Repository Structure
 
 ```text
 .
@@ -521,7 +521,7 @@ The original report specifies a repository structure containing the report, scre
 
 ---
 
-# 📚 References
+#  References
 
 * **OWASP API Security Top 10 (2023)**
 * **API Security Checklist**
